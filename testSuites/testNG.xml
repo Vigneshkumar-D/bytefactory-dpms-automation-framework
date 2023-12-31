@@ -1,0 +1,45 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium Tests">
+    <listeners>
+        <listener class-name="org.bytefactorydpmsautomation.TestComponents.CustomListeners"/>
+    </listeners>
+    <test name="Main">
+        <classes>
+            <class name="org.bytefactorydpmsautomation.TestComponents.BaseTest">
+                <methods>
+                    <include name="setUp"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Login Test">
+        <classes>
+            <class name="org.bytefactorydpmsautomation.tests.LoginTest">
+                <methods>
+                    <include name="loginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Configuration Test">
+        <classes>
+            <class name="org.bytefactorydpmsautomation.tests.ConfigurationTest">
+                <methods>
+                    <include name="superUserRoleCreationTest"/>
+                    <include name="searchRoleTest" />
+                    <include name="superUserCreationTest" />
+                    <include name="superUserAccessTest" />
+                    <include name="logOutAdminTest" />
+                    <include name="loginSuperUserTest" />
+                    <include name="managerRoleCreationTest" />
+                    <include name="technicianRoleCreationTest" />
+                    <include name="managerUserCreationTest" />
+                    <include name="technicianUserCreationTest" />
+                    <include name="managerUserAccessTest" />
+                    <include name="technicianUserAccessTest" />
+                    <include name="superUserLogout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
